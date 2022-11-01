@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система управления контактными данными клиентов</title>
+  <link rel="icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Система управления контактными данными клиентов</h1>
+    <div class="container header__container">
+      <img class="header__img" src="img/logo.png" alt="">
+      <input id="header__input" class="header__input" type="text" placeholder="Введите запрос" />
+    </div>
+  </header>
+  <main>
+    <div class="container hero">
+      <h2 class="hero__title">Клиенты</h2>
+      <div class="table__block">
+        <div class="hero__table">
+          <div class="hero__table__head">
+            <ul class="hero__table__line">
+              <li class="title__item">
+                <button id="title1" class="hero__table-title1 hero__table-title1-active table__Cell-id btn-reset">
+                  ID
+                  <div class="ID-arrow1"></div>
+                  <div class="ID-arrow2"></div>
+                  <div class="ID-arrow3"></div> 
+                </button>
+              </li>
+              <li class="title__item">
+                <button id="title2" class="hero__table-title2 btn-reset">
+                  Фамилия Имя Отчество
+                  <div class="name-arrow1"></div>
+                  <div class="name-arrow2"></div>
+                  <div class="name-arrow3"></div>
+                  <span id="title2__letters" class="title2__letters">А-Я</span>
+                </button>
+              </li>
+              <li class="title__item">
+                <button id="title3" class="hero__table-title3 btn-reset">
+                  Дата и время создания
+                  <div class="dateM-arrow1"></div>
+                  <div class="dateM-arrow2"></div>
+                  <div class="dateM-arrow3"></div> 
+                </button>
+              </li>
+              <li class="title__item">
+                <button id="title4" class="hero__table-title4 btn-reset">
+                  Последние изменения
+                  <div class="dateUp-arrow1"></div>
+                  <div class="dateUp-arrow2"></div>
+                  <div class="dateUp-arrow3"></div> 
+                </button>
+              </li>
+              <li class="title__item">
+                <div class="hero__table-title5 table__Cell-contacts">
+                  Контакты
+                </div>
+              </li>
+              <li class="title__item">
+                <div class="hero__table-title5 table__Cell-btns">
+                  Действия
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="clients" class="hero__table-body">
+            <div class="loadingio-spinner-eclipse-5c6fcsearps">
+              <div class="ldio-46upgtjv60x">
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="hero__add-button">
+        <svg class="hero__svg" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
+        </svg>
+        Добавить клиента
+      </button>
+    </div>
+    <div class="div__tooltip">
+      <div class="tooltip__relative"></div>
+    </div>
+  </main>
+  <div id="change__modal" class="change__modal">
+    <div class="change__body">
+      <div class="change__content">
+        <div class="change__title-part">
+          <h3 id="modal__title" class="change__title">Изменить данные</h3>
+          <p class="change__ID">
+            ID:
+            <span id="change__id"></span>
+          </p>
+        </div>
+        <label class="change__descr" for="change__sureName">Фамилия*</label>
+        <input id="change__sureName" class="change__input" type="text"/>
+        <label class="change__descr" for="change__name">Имя*</label>
+        <input id="change__name" class="change__input" type="text"/>
+        <label class="change__descr" for="change__lastName">Отчество</label>
+        <input id="change__lastName" class="change__input" type="text"/>
+        <div id="change__contacts" class="change__contacts"></div>
+        <button id="change__btn-contacts" class="change__btn-contacts btn-reset">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.99998 3.66671C6.63331 3.66671 6.33331 3.96671 6.33331 4.33337V6.33337H4.33331C3.96665 6.33337 3.66665 6.63337 3.66665 7.00004C3.66665 7.36671 3.96665 7.66671 4.33331 7.66671H6.33331V9.66671C6.33331 10.0334 6.63331 10.3334 6.99998 10.3334C7.36665 10.3334 7.66665 10.0334 7.66665 9.66671V7.66671H9.66665C10.0333 7.66671 10.3333 7.36671 10.3333 7.00004C10.3333 6.63337 10.0333 6.33337 9.66665 6.33337H7.66665V4.33337C7.66665 3.96671 7.36665 3.66671 6.99998 3.66671ZM6.99998 0.333374C3.31998 0.333374 0.333313 3.32004 0.333313 7.00004C0.333313 10.68 3.31998 13.6667 6.99998 13.6667C10.68 13.6667 13.6666 10.68 13.6666 7.00004C13.6666 3.32004 10.68 0.333374 6.99998 0.333374ZM6.99998 12.3334C4.05998 12.3334 1.66665 9.94004 1.66665 7.00004C1.66665 4.06004 4.05998 1.66671 6.99998 1.66671C9.93998 1.66671 12.3333 4.06004 12.3333 7.00004C12.3333 9.94004 9.93998 12.3334 6.99998 12.3334Z" fill="#9873FF"/>
+          </svg>
+          Добавить контакт
+        </button>
+        <p class="change__walidation"></p>
+        <button class="change__btn-save btn-reset">
+          Сохранить
+        </button>
+        <button class="change__btn-del btn-reset">
+          Удалить клиента
+        </button>
+        <button id="change__btn-exit" class="change__btn-exit btn-reset">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="change__svg-exit" fill-rule="evenodd" clip-rule="evenodd" d="M16.2332 1.73333L15.2665 0.766664L8.49985 7.53336L1.73318 0.766696L0.766515 1.73336L7.53318 8.50003L0.766542 15.2667L1.73321 16.2333L8.49985 9.46669L15.2665 16.2334L16.2332 15.2667L9.46651 8.50003L16.2332 1.73333Z" fill="#B0B0B0"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="del__modal" class="del__modal">
+    <div class="del__body">
+      <div class="del__content">
+        <h3 class="del__title">Удалить клиента</h3>
+        <p class="del__descr">
+          Вы действительно хотите удалить данного клиента?
+        </p>
+        <button id="del__btn" class="del__btn btn-reset">
+          Удалить
+        </button>
+        <button id="del__btn-back" class="del__btn-back btn-reset">
+          Отмена
+        </button>
+        <button id="del__btn-exit" class="change__btn-exit btn-reset">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="change__svg-exit" fill-rule="evenodd" clip-rule="evenodd" d="M16.2332 1.73333L15.2665 0.766664L8.49985 7.53336L1.73318 0.766696L0.766515 1.73336L7.53318 8.50003L0.766542 15.2667L1.73321 16.2333L8.49985 9.46669L15.2665 16.2334L16.2332 15.2667L9.46651 8.50003L16.2332 1.73333Z" fill="#B0B0B0"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
