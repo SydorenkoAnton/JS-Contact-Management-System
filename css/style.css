@@ -61,6 +61,7 @@ img {
 body {
   background-color: #E5E5E5;
   margin: 0 auto;
+  min-width: 768px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -1223,7 +1224,7 @@ ul {
   top: 0;
   border: 1px solid #C8C5D1;
   background: #E7E5EB;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .contact__btn-exit:hover .table__contakts-btn {
@@ -1424,7 +1425,67 @@ ul {
     margin-right: 0;
     margin-bottom: 5px;
   }
+
+  .ID-arrow1 {
+    right: 63px;
+  }
+
+  .ID-arrow2 {
+    right: 64.7px;
+  } 
+
+  .ID-arrow3 {
+    right: 61.5px;
+  } 
   
+  .hero__table-title1-active .ID-arrow2 {
+    right: 64.7px;
+  }
+  
+  .hero__table-title1-active .ID-arrow3 {
+    right: 61.5px;
+  }
+  
+  .name-arrow1 {
+    right: 25px;
+  }
+  
+  .name-arrow2 {
+    right: 26.7px;
+  } 
+
+  .name-arrow3 {
+    right: 23.5px;
+  } 
+  
+  .hero__table-title2-active .name-arrow2 {
+    right: 26.7px;
+  }
+  
+  .hero__table-title2-active .name-arrow3 {
+    right: 23.5px;
+  }
+
+  .dateM-arrow1 {
+    right: 11px;
+  }
+
+  .dateM-arrow2 {
+    right: 12px;
+  }
+  
+  .dateM-arrow3 {
+    right: 10px;
+  } 
+  
+  .hero__table-title3-active .dateM-arrow2 {
+    right: 12px;
+  }
+  
+  .hero__table-title3-active .dateM-arrow3 {
+    right: 10px;
+  }
+
   .hero__table-title3 {
     width: 100px;
   }
@@ -1441,6 +1502,27 @@ ul {
   .hero__table-title4 {
     width: 100px;
   }
+
+  .dateUp-arrow1 {
+    right: 7px;
+  }
+  
+  .dateUp-arrow2 {
+    right: 8px;
+  } 
+
+  .dateUp-arrow3 {
+    right: 6px;
+  } 
+  
+  .hero__table-title4-active .dateUp-arrow2 {
+    right: 8px;
+  }
+  
+  .hero__table-title4-active .dateUp-arrow3 {
+    right: 6px;
+  }
+
   
   .table__Cell-lastupd {
     width: 100px;
@@ -1461,5 +1543,10 @@ ul {
   .table__Cell-id {
     width: 100px;
     padding-left: 15px;
+  }
 }
+@media (max-width: 768px) {
+  body {
+    overflow-x: scroll;
+  }
 }
